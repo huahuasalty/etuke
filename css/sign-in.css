@@ -1,0 +1,289 @@
+.sign-in {
+  background: url(../image/login/bg.png);
+  position: relative;
+}
+
+.sign-in__header {
+  padding-top: 2.9688vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sign-in__header .title {
+  width: 39.0104vw;
+  font-size: 2.2917vw;
+  font-family: SourceHanSansCN;
+  font-weight: bold;
+  color: #129BF3;
+  background: -webkit-gradient(linear, left bottom, left top, from(#A9EAFC), to(#E6F1FF));
+  background: linear-gradient(0deg, #A9EAFC 0%, #E6F1FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sign-in__header .locl-title {
+  margin-top: 0.8854vw;
+  width: 37.8125vw;
+  height: 5.1042vw;
+  background: url(../image/governance-information-platform/fy_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.sign-in__content {
+  width: 100%;
+  height: 26.5625vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1.7708vw;
+}
+
+.sign-in__content .sic-wapper {
+  height: 100%;
+  width: 21.875vw;
+  background: #FFFFFF;
+  opacity: 0.98;
+  border-radius: 1.0417vw;
+  position: relative;
+  z-index: 9;
+}
+
+.sign-in__content .sic-wapper .login-box {
+  padding: 2.5521vw 2.5vw;
+}
+
+.sign-in__content .sic-wapper .login-box__title {
+  width: 100%;
+  font-size: 1.25vw;
+  font-family: SourceHanSansCN;
+  font-weight: bold;
+  color: #25323E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2.5521vw;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item {
+  height: 2.3958vw;
+  margin-bottom: 1.5625vw;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item .el-form-item__content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item .el-form-item__content .el-input {
+  height: 100%;
+  padding: 0;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item .el-form-item__content .el-input input {
+  padding: 0;
+  padding-left: 2.3958vw;
+  height: 100%;
+  font-size: 0.9375vw;
+  font-family: Arial;
+  font-weight: bold;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item .el-form-item__content .el-input input::-webkit-input-placeholder {
+  font-size: 0.9375vw;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: #8195A5;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item .el-form-item__content .el-input input:-ms-input-placeholder {
+  font-size: 0.9375vw;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: #8195A5;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item .el-form-item__content .el-input input::-ms-input-placeholder {
+  font-size: 0.9375vw;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: #8195A5;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item .el-form-item__content .el-input input::placeholder {
+  font-size: 0.9375vw;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: #8195A5;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item .el-form-item__content .el-input .el-input__prefix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 2.3958vw;
+  left: 0;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item .el-form-item__content .code-input {
+  width: 9.2708vw;
+  margin-right: 0.9375vw;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item .el-form-item__content .code-img {
+  width: 6.6667vw;
+  height: 2.3958vw;
+  border: 0;
+  border-radius: 0.5208vw;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item .el-form-item__content .code-img img {
+  height: 100%;
+  width: 100%;
+  background-color: #e8effd;
+  border: 0;
+  border-radius: 0.5208vw;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item:nth-child(1) .p-icon {
+  width: 0.9375vw;
+  height: 1.25vw;
+  background: url(../image/login/icon_3.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item:nth-child(2) .p-icon {
+  width: 1.0417vw;
+  height: 1.25vw;
+  background: url(../image/login/icon_2.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .el-form-item:nth-child(3) .p-icon {
+  width: 1.1458vw;
+  height: 1.1979vw;
+  background: url(../image/login/icon_1.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .last-form-item {
+  margin-bottom: 1.0417vw;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .check-box {
+  padding: 0 0 2.6042vw 0.7813vw;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .check-box .el-checkbox .el-checkbox__input .el-checkbox__inner {
+  width: 0.8333vw;
+  height: 0.8333vw;
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .check-box .el-checkbox .el-checkbox__input .el-checkbox__inner::after {
+  left: calc(50% - .1042vw);
+  top: calc(50% - .2604vw);
+}
+
+.sign-in__content .sic-wapper .login-box__content .el-form .check-box .el-checkbox__label {
+  font-size: 0.8333vw;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: #8195A5;
+}
+
+.sign-in__content .sic-wapper .login-box__button {
+  width: 100%;
+}
+
+.sign-in__content .sic-wapper .login-box__button .el-button {
+  width: 100%;
+  height: 2.9167vw;
+  background: #226CF5;
+  border-radius: 0.5208vw;
+  font-size: 1.1458vw;
+  font-family: SourceHanSansCN;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.sign-in__tuceng1 {
+  width: 100%;
+  height: 18.5417vw;
+  background: url(../image/login/tuc_1.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 17.7083vw;
+  z-index: 1;
+}
+
+.sign-in__tuceng2 {
+  width: 100%;
+  height: 28.3333vw;
+  background: url(../image/login/tuc_2.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 11.1979vw;
+  z-index: 1;
+}
+
+.sign-in__tuceng3 {
+  width: 100%;
+  height: 20vw;
+  position: absolute;
+  left: 0;
+  top: 26.8229vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+.sign-in__tuceng3 .sit-wapper {
+  height: 100%;
+  width: 83.75vw;
+  background: url(../image/login/tuc_3.png) no-repeat;
+  background-size: 100% 100%;
+}

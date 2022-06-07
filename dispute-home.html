@@ -1,0 +1,80 @@
+<!-- 矛盾纠纷多元化解首页 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>矛盾纠纷多元化解首页</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    </link>
+    <link rel="stylesheet" href="./css/element.css">
+    </link>
+    <link rel="stylesheet" href="./css/dispute-home.css">
+    </link>
+    <link rel="stylesheet" href="./css/anicollection-min.css">
+    </link>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/element.js"></script>
+</head>
+
+<body>
+    <div class="base-c dispute-home" id="dispute-home-root">
+        <div class="dispute-home__header">
+            <div class="block_1">
+                <div class="call-back" @click="callBack"></div>
+                <div class="title">鄂托克前旗社会治安综合治理信息平台</div>
+            </div>
+            <div class="block_2">
+                <div class="time">2022年05月27日 星期五</div>
+                <div class="b-icon">
+                    <img src="./image/anonymous-letter/pwd_icon.png" />
+                </div>
+                <div class="b-icon">
+                    <img src="./image/anonymous-letter/sm_icon.png" />
+                </div>
+                <div class="b-icon">
+                    <img src="./image/anonymous-letter/login_icon.png" />
+                </div>
+            </div>
+        </div>
+        <div class="dispute-home__content">
+            <div class="alc-left">
+                <el-menu ref="menuRef" :default-active="defaultActive" :default-openeds="[parentActive]" class="el-menu-vertical-demo" :unique-opened="true" @open="handleOpen" @select="handleSelected" @close="handleClose"
+                    background-color="#226CF5" text-color="#fff" active-text-color="#226CF5" :collapse-transition="false">
+                    <template v-for="(item, index) in menuList">
+                        <template v-if="item.childrens && item.childrens.length > 0">
+                            <el-submenu :index="item.index">
+                                <template slot="title">
+                                    <img v-if="item.childrensIndex.includes(defaultActive)" :src="`${item.icon}_select.png`" alt="">
+                                    <img v-else :src="`${item.icon}.png`" alt="">
+                                    <span>{{item.title}}</span>
+                                </template>
+                                <el-menu-item-group>
+                                    <el-menu-item v-for="v in item.childrens" :key="v.index" :index="v.index">{{v.title}}</el-menu-item>
+                                </el-menu-item-group>
+                            </el-submenu>
+                        </template>
+                        <template v-else>
+                            <el-menu-item :index="item.index">
+                                <img v-if="defaultActive == item.index" :src="`${item.icon}_select.png`" alt="">
+                                <img v-else :src="`${item.icon}.png`" alt="">
+                                <span slot="title">{{item.title}}
+                                    <div class="num-box" v-if="item.num">
+                                    <span class="_span">{{item.num}}
+                                </span>
+                                </div></span>
+                            </el-menu-item>
+                        </template>
+                    </template>
+                </el-menu>
+            </div>
+            <div class="alc-right"></div>
+        </div>
+    </div>
+    <script src="./js/anijs-min.js"></script>
+    <script src="./js/module/dispute-home.js"></script>
+</body>
+
+</html>

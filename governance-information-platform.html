@@ -1,0 +1,145 @@
+<!-- 治理信息平台 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>治理信息平台</title>
+    <link rel="stylesheet" href="./css/reset.css"></link>
+    <link rel="stylesheet" href="./css/element.css"></link>
+    <link rel="stylesheet" href="./css/anicollection-min.css"></link>
+    <link rel="stylesheet" href="./css/governance-information-platform.css"></link>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/element.js"></script>
+</head>
+<body>
+    <div class="base-c governance-information-platform" id="governance-information-platform-root">
+        <div class="governance-information-platform__header">
+            <div class="title">鄂托克前旗社会治安综合治理信息平台</div>
+            <div class="fy-title"></div>
+        </div>
+        <div class="governance-information-platform__content">
+            <div class="block-one">
+                <!-- 第一个 -->
+                <div class="wapper">
+                    <div class="bo-item" @mousemove="mousemove" @mouseleave="mouseleave" @click="handleItem($event, '基础数据')">
+                        <div class="bo-item__icon">
+                            <div :class="['bii-after', currentAniClass]"  >
+                                <img src="./image/governance-information-platform/icon_11@2x.png"/>
+                            </div>
+                        </div>
+                        <div class="bo-item__label">基础数据</div>
+                    </div>
+                </div>
+                <!-- 第二个 -->
+                <div class="wapper">
+                    <div class="bo-item" @mousemove="mousemove" @mouseleave="mouseleave"  @click="handleItem($event, '网格管理')">
+                        <div class="bo-item__icon">
+                            <div :class="['bii-after', currentAniClass]" >
+                                <img src="./image/governance-information-platform/icon_12@2x.png"/>
+                            </div>
+                        </div>
+                        <div class="bo-item__label">网格管理</div>
+                    </div>
+                </div>
+                <!-- 第三个 -->
+                <div class="wapper">
+                    <div class="bo-item" @mousemove="mousemove" @mouseleave="mouseleave"  @click="handleItem($event, 'GIS应用')">
+                        <div class="bo-item__icon">
+                            <div :class="['bii-after', currentAniClass]"  >
+                                <img src="./image/governance-information-platform/icon_13@2x.png"/>
+                            </div>
+                        </div>
+                        <div class="bo-item__label">GIS应用</div>
+                    </div>
+                </div>
+                <!-- 第四个 -->
+                <div class="wapper">
+                    <div class="bo-item" @mousemove="mousemove" @mouseleave="mouseleave" @click="handleItem($event, '矛盾纠纷多元化解')">
+                        <div class="bo-item__icon">
+                            <div :class="['bii-after', currentAniClass]" >
+                                <img src="./image/governance-information-platform/icon_14@2x.png"/>
+                            </div>
+                        </div>
+                        <div class="bo-item__label">矛盾纠纷多元化解</div>
+                    </div>
+                </div>
+                <!-- 第五个 -->
+                <div class="wapper">
+                    <div class="bo-item" @mousemove="mousemove" @mouseleave="mouseleave" @click="handleItem($event, '矛盾纠纷专家库')">
+                        <div class="bo-item__icon">
+                            <div :class="['bii-after', currentAniClass]" >
+                                <img src="./image/governance-information-platform/icon_15@2x.png"/>
+                            </div>
+                        </div>
+                        <div class="bo-item__label">矛盾纠纷专家库</div>
+                    </div>
+                </div>
+            </div>
+            <div class="block-two">
+                <!-- 第一个 -->
+                <div class="wapper">
+                    <div class="bt-item"  @mousemove="mousemove($event, 1)" @mouseleave="mouseleave(1)"  @click="handleItem($event, '辅助决策')">
+                        <div class="bt-item-wapper">
+                            <div :class="['biw-img', currentAniClass1]" >
+                                <img src="./image/governance-information-platform/line2_1.png"/>
+                            </div>
+                            <div class="biw-title">辅助决策</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第二个 -->
+                <div class="wapper">
+                    <div class="bt-item"  @mousemove="mousemove($event, 1)" @mouseleave="mouseleave(1)"  @click="handleItem($event, '综合业务')">
+                        <div class="bt-item-wapper">
+                            <div :class="['biw-img', currentAniClass1]" >
+                                <img src="./image/governance-information-platform/line2_2.png"/>
+                            </div>
+                            <div class="biw-title">综合业务</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第三个 -->
+                <div class="wapper">
+                    <div class="bt-item"  @mousemove="mousemove($event, 1)" @mouseleave="mouseleave(1)"  @click="handleItem($event, '绩效考核')">
+                        <div class="bt-item-wapper">
+                            <div :class="['biw-img', currentAniClass1]" >
+                                <img src="./image/governance-information-platform/line2_3.png"/>
+                            </div>
+                            <div class="biw-title">绩效考核</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第四个 -->
+                <div class="wapper">
+                    <div class="bt-item" @mousemove="mousemove($event, 1)" @mouseleave="mouseleave(1)" @click="handleItem($event, '视频应用')">
+                        <div class="bt-item-wapper">
+                            <div :class="['biw-img', currentAniClass1]" >
+                                <img src="./image/governance-information-platform/line2_4.png"/>
+                            </div>
+                            <div class="biw-title">视频应用</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第五个 -->
+                <div class="wapper">
+                    <div class="bt-item" @mousemove="mousemove($event, 1)" @mouseleave="mouseleave(1)" @click="handleItem($event, '系统管理')">
+                        <div class="bt-item-wapper">
+                            <div :class="['biw-img', currentAniClass1]" >
+                                <img src="./image/governance-information-platform/line2_5.png"/>
+                            </div>
+                            <div class="biw-title">系统管理</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/anijs-min.js"></script>
+    <script src="./js/module/governance-information-platform.js"></script>
+    <script>
+        AniJS.run();
+    </script>
+</body>
+</html>

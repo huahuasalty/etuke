@@ -1,0 +1,298 @@
+.governance-information-platform {
+  background: url(../image/governance-information-platform/all_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.governance-information-platform__header {
+  padding-top: 2.9688vw;
+  margin-bottom: 8.9063vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.governance-information-platform__header .title {
+  font-size: 2.2917vw;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #129BF3;
+  background: -webkit-gradient(linear, left bottom, left top, from(#A9EAFC), to(#E6F1FF));
+  background: linear-gradient(0deg, #A9EAFC 0%, #E6F1FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.governance-information-platform__header .fy-title {
+  margin-top: 1.4063vw;
+  width: 37.8125vw;
+  height: 5.1042vw;
+  background: url(../image/governance-information-platform/fy_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.governance-information-platform__content {
+  width: 100%;
+}
+
+.governance-information-platform__content .block-one {
+  width: 100%;
+  height: 14.4792vw;
+  background: url(../image/governance-information-platform/yp_bg.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.governance-information-platform__content .block-one .wapper {
+  position: absolute;
+}
+
+.governance-information-platform__content .block-one .wapper .bo-item {
+  width: 14.4792vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.governance-information-platform__content .block-one .wapper .bo-item__icon {
+  margin-top: 0.9896vw;
+  width: 9.2708vw;
+  height: 10.4688vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.governance-information-platform__content .block-one .wapper .bo-item__icon .bii-after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../image/governance-information-platform/line1_bg1.png) no-repeat;
+  background-size: 100% 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.governance-information-platform__content .block-one .wapper .bo-item__icon .bii-after img {
+  position: absolute;
+  top: calc(50% - 4.8958vw / 2);
+  left: calc(50% - 4.8958vw  / 2);
+  width: 4.8958vw;
+  height: 4.8958vw;
+  pointer-events: none;
+}
+
+.governance-information-platform__content .block-one .wapper .bo-item__label {
+  margin-top: 1.875vw;
+  font-size: 1.5625vw;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #FFFFFF;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.governance-information-platform__content .block-one .wapper .bo-item:hover .bo-item__icon .bii-after {
+  -webkit-animation: rotate 1s;
+  animation: rotate 1s;
+}
+
+.governance-information-platform__content .block-one .wapper .bo-item-click .bo-item__icon .bii-after {
+  content: "";
+  width: 12.9688vw;
+  height: 14.6302vw;
+  position: absolute;
+  left: calc(50% - 12.9688vw / 2);
+  top: calc(50% - 14.6302vw / 2 - 2.6042vw);
+  background: url(../image/governance-information-platform/line1_bg2.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.governance-information-platform__content .block-one .wapper .bo-item-click .bo-item__label {
+  position: relative;
+  bottom: -1.0417vw;
+  font-size: 1.5625vw;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #2396ED;
+  background: -webkit-gradient(linear, left bottom, left top, from(#A9EAFC), to(#E6F1FF));
+  background: linear-gradient(0deg, #A9EAFC 0%, #E6F1FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.governance-information-platform__content .block-one .wapper:nth-child(1) {
+  left: 13.75vw;
+  bottom: 7.1354vw;
+}
+
+.governance-information-platform__content .block-one .wapper:nth-child(2) {
+  left: 28.2292vw;
+  bottom: 4.5313vw;
+}
+
+.governance-information-platform__content .block-one .wapper:nth-child(3) {
+  left: 42.7083vw;
+  bottom: 3.4896vw;
+}
+
+.governance-information-platform__content .block-one .wapper:nth-child(4) {
+  left: 57.1875vw;
+  bottom: 4.5313vw;
+}
+
+.governance-information-platform__content .block-one .wapper:nth-child(5) {
+  left: 71.6667vw;
+  bottom: 7.1354vw;
+}
+
+.governance-information-platform__content .block-two {
+  width: 100%;
+  height: 7.5729vw;
+  background: url(../image/governance-information-platform/fx_bg.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.governance-information-platform__content .block-two .wapper {
+  position: absolute;
+}
+
+.governance-information-platform__content .block-two .wapper .bt-item {
+  width: 6.5625vw;
+  position: relative;
+}
+
+.governance-information-platform__content .block-two .wapper .bt-item .bt-item-wapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.governance-information-platform__content .block-two .wapper .bt-item .bt-item-wapper .biw-img {
+  height: 6.5625vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+}
+
+.governance-information-platform__content .block-two .wapper .bt-item .bt-item-wapper .biw-title {
+  font-size: 1.25vw;
+  font-family: Source Han Sans CN;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.governance-information-platform__content .block-two .wapper .bt-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.5625vw;
+  background: url(../image/governance-information-platform/line2_kh.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.governance-information-platform__content .block-two .wapper:nth-child(1) {
+  left: 14.8438vw;
+  top: 1.4063vw;
+}
+
+.governance-information-platform__content .block-two .wapper:nth-child(1) .bt-item::after {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+.governance-information-platform__content .block-two .wapper:nth-child(2) {
+  left: 30.7813vw;
+  top: 3.125vw;
+}
+
+.governance-information-platform__content .block-two .wapper:nth-child(2) .bt-item::after {
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+}
+
+.governance-information-platform__content .block-two .wapper:nth-child(3) {
+  left: 46.7188vw;
+  top: 3.6719vw;
+}
+
+.governance-information-platform__content .block-two .wapper:nth-child(3) .bt-item::after {
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.governance-information-platform__content .block-two .wapper:nth-child(4) {
+  left: 62.6563vw;
+  top: 3.125vw;
+}
+
+.governance-information-platform__content .block-two .wapper:nth-child(4) .bt-item::after {
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+}
+
+.governance-information-platform__content .block-two .wapper:nth-child(5) {
+  left: 78.5938vw;
+  top: 1.4063vw;
+}
+
+.governance-information-platform__content .block-two .wapper:nth-child(5) .bt-item::after {
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+@media all and (min-height: 1080px) {
+  .governance-information-platform__header {
+    padding-top: 5.1563vw;
+  }
+}

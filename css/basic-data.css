@@ -1,0 +1,180 @@
+.basic-data {
+  position: relative;
+}
+
+.basic-data__tbg {
+  width: 100%;
+  height: 21.9063vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../image/basic-data/bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.basic-data__header {
+  position: relative;
+  padding: 3.5938vw 0 4.1667vw 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.basic-data__header .title {
+  font-size: 2.2917vw;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #129BF3;
+  background: -webkit-gradient(linear, left bottom, left top, from(#A9EAFC), to(#E6F1FF));
+  background: linear-gradient(0deg, #A9EAFC 0%, #E6F1FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.4063vw;
+}
+
+.basic-data__header .fy-title {
+  width: 37.8125vw;
+  height: 5.1042vw;
+  background: url(../image/governance-information-platform/fy_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.basic-data__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.basic-data__content .title_name {
+  width: 100%;
+  text-align: center;
+}
+
+.basic-data__content .title_name span {
+  font-size: 1.875vw;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  color: #226CF5;
+  background: linear-gradient(49deg, 0%, #0078EE 100%);
+  -webkit-background-clip: text;
+}
+
+.basic-data__content .content {
+  margin-top: 3.5417vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.basic-data__content .content .c-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 84.6875vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.basic-data__content .content .c-line .cl-item {
+  width: 16.9271vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.basic-data__content .content .c-line .cl-item__icon {
+  margin-top: 0.9896vw;
+  width: 6.25vw;
+  height: 7.0885vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.basic-data__content .content .c-line .cl-item__icon img {
+  position: absolute;
+  top: calc(50% - 2.8125vw / 2);
+  left: calc(50% - 2.8125vw / 2);
+  width: 2.8125vw;
+  height: 2.8125vw;
+  pointer-events: none;
+}
+
+.basic-data__content .content .c-line .cl-item__icon .cic-after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../image/basic-data/tk_bg2.png) no-repeat;
+  background-size: 100% 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.basic-data__content .content .c-line .cl-item__label {
+  margin-top: 1.0938vw;
+  font-size: 1.25vw;
+  font-family: Source Han Sans CN;
+  font-weight: 400;
+  color: #1D2129;
+  margin-bottom: 1.5625vw;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.basic-data__content .content .c-line .cl-item:hover .cl-item__icon .cic-after {
+  -webkit-animation: rotate 1s;
+  animation: rotate 1s;
+}
+
+.basic-data__content .content .c-line .cl-item:hover .cl-item__label {
+  font-weight: 500;
+  color: #0078EE;
+}
+
+.basic-data__content .content .c-line .cl-item-click .cl-item__icon .cic-after {
+  content: "";
+  width: 8.3333vw;
+  height: 9.4688vw;
+  position: absolute;
+  left: calc(50% - 8.3333vw / 2);
+  top: calc(50% - 9.4688vw / 2 - 1.0938vw);
+  background: url(../image/basic-data/tk_bg2.png) no-repeat;
+  background-size: 100% 100%;
+}

@@ -1,0 +1,238 @@
+<!-- GIS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIS</title>
+    <link rel="stylesheet" href="./css/reset.css"></link>
+    <link rel="stylesheet" href="./css/element.css"></link>
+    <link rel="stylesheet" href="./css/gis.css"></link>
+    <link rel="stylesheet" href="./css/anicollection-min.css"></link>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/element.js"></script>
+</head>
+<body>
+    <div class="base-c gis" id="gis-root">
+        <div class="gis__header">
+            <div class="gh-wapper">
+                <el-menu :default-active="activeIndex" 
+                mode="horizontal" 
+                @select="handleSelect">
+                    <el-menu-item index="1"><div>特殊人群</div></el-menu-item>
+                    <el-menu-item index="2"><div>弱势群体</div></el-menu-item>
+                    <el-menu-item index="3"><div>房屋</div></el-menu-item>
+                    <el-menu-item index="4"><div>事件</div></el-menu-item>
+                    <el-menu-item index="5"><div>风险评估</div></el-menu-item>
+                    <el-menu-item index="6"><div>监控</div></el-menu-item>
+                    <el-menu-item index="7"><div>应急</div></el-menu-item>
+                    <el-menu-item index="8"><div>行业场所</div></el-menu-item>
+                    <el-menu-item index="9"><div>两新组织</div></el-menu-item>
+                    <el-menu-item index="10"><div>校园安全</div></el-menu-item>
+                    <el-menu-item index="11"><div>防控力量</div></el-menu-item>
+                    <el-menu-item index="12"><div>区域显示</div></el-menu-item>
+                </el-menu>
+            </div>
+        </div>
+        <div class="gis__content">
+            <div class="gc-left">
+                <div :class="['gc-left__block-1', activeClass.one]">
+                    <div class="change-icon"  @click="leftAfterClick('one')"></div>
+                    <div class="nav-title">事件信息</div>
+                    <div class="opt-item">
+                        <div class="label">半径(500米)</div>
+                        <div class="value">
+                            <el-slider v-model="value3" :show-tooltip="false"></el-slider>
+                        </div>
+                    </div>
+                    <div class="opt-item  input-item">
+                        <el-input placeholder="输入事件名称" v-model="input3" class="input-with-select">
+                            <el-button slot="append" icon="el-icon-search"></el-button>
+                        </el-input>
+                    </div>
+                    <div class="opt-item select-item">
+                        <el-select v-model="selectValue.value1" placeholder="请选择">
+                            <el-option value="1" label="敖勒召其镇"></el-option>
+                        </el-select>
+                        <el-select v-model="selectValue.value2" placeholder="请选择">
+                            <el-option value="1" label="社区"></el-option>
+                        </el-select>
+                        <el-select v-model="selectValue.value3" placeholder="请选择">
+                            <el-option value="1" label="网格"></el-option>
+                        </el-select>
+                        <el-select v-model="selectValue.value4" placeholder="请选择">
+                            <el-option value="1" label="状态"></el-option>
+                        </el-select>
+                    </div>
+                </div>
+                <div :class="['gc-left__block-2', activeClass.two]">
+                    <div class="change-icon" @click="leftAfterClick('two')"></div>
+                    <div class="tabel-box">
+                        <div class="title">共搜索到<span>{{total}}</span>条</div>
+                        <el-table
+                            :data="tableData"
+                            style="width: 100%"
+                            :border="0">
+                            <el-table-column prop="date">
+                                <template slot-scope="scope">
+                                    <div class="column-box" :style="{background: (scope.$index % 2 === 0) ? '#F4F8FF':''}">
+                                        <div class="cb-index">
+                                            <div class="_span">
+                                                <span>{{scope.$index}}</span>
+                                            </div>
+                                        </div>
+                                        <div class="value">
+                                            <span>{{scope.row.name}}</span>
+                                        </div>
+                                    </div>
+                                </template>
+                            </el-table-column>
+                        </el-table>
+                        <div class="pagination-box">
+                            <el-pagination
+                                background
+                                :page-size="pageSize"
+                                :pager-count="3"
+                                layout="prev, pager, next"
+                                :total="total">
+                            </el-pagination>
+                        </div>
+                    </div>
+                    <!-- tab栏 -->
+                    <div class="tab-box">
+                        <el-tabs type="border-card" tab-position="left">
+                            <el-tab-pane v-for="v in 6">
+                                <template slot="label">
+                                    <div class="_text-wapper">
+                                        <div class="tw-box">
+                                            <div class="jb-left_icon"></div>
+                                            <div class="jb-text">胜利社区第一网格2</div>
+                                            <div class="jb-right_icon"></div>
+                                        </div>
+                                    </div>
+                                </template>
+                                <div class="tab-content-box">
+                                    <div class="tcb-item" v-for="item in 3">
+                                        <div class="tcb-item__left">
+                                            <img src="./image/gis/bytx.png"/>
+                                        </div>
+                                        <div class="tcb-item__right">
+                                            <div class="tir-text">
+                                                <span>姓名:张三</span>
+                                                <span>住址:乌兰地区</span>
+                                                <span>电话:0477-7856421</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </el-tab-pane>
+                        </el-tabs>
+                        </div>
+                    </div>
+                </div>
+                <div class="gc-right" >
+                    <div class="gc-right__block-1">
+                        <el-select v-model="selectValue.value1" placeholder="请选择">
+                            <el-option value="1" label="敖勒召其镇"></el-option>
+                        </el-select>
+                        <el-select v-model="selectValue.value2" placeholder="请选择">
+                            <el-option value="1" label="社区"></el-option>
+                        </el-select>
+                    </div>
+                    <div :class="['gc-right__block-2', activeClass.three]">
+                        <div class="change-icon"  @click="leftAfterClick('three')"></div>
+                        <div class="statistics-box">
+                            <div class="nav-title">统计</div>
+                            <div class="sb-box">
+                                <div class="sbb-item">
+                                    <div class="si__left">
+                                        <img src="./image/gis/syrk_icon.png"/>
+                                    </div>
+                                    <div class="si__right">
+                                        <div class="label">实有人口</div>
+                                        <div class="value">200,000</div>
+                                    </div>
+                                </div>
+                                <div class="sbb-item">
+                                    <div class="si__left">
+                                        <img src="./image/gis/sydw_icon.png"/>
+                                    </div>
+                                    <div class="si__right">
+                                        <div class="label">实有单位</div>
+                                        <div class="value">200,000</div>
+                                    </div>
+                                </div>
+                                <div class="sbb-item">
+                                    <div class="si__left">
+                                        <img src="./image/gis/syfc_icon.png"/>
+                                    </div>
+                                    <div class="si__right">
+                                        <div class="label">实有房层</div>
+                                        <div class="value">200,000</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navigation-box">
+                            <div class="nav-title">导航</div>
+                            <div class="nb-item-box">
+                                <div class="nb-item">
+                                    <div class="img-box">
+                                        <img src="./image/gis/bytx.png"/>
+                                    </div>
+                                    <div class="text-box">
+                                        <span>姓名&nbsp;&nbsp;张三</span>
+                                        <span>住址&nbsp;&nbsp;乌兰地区</span>
+                                        <span>电话&nbsp;&nbsp;0477-7856421</span>
+                                    </div>
+                                </div>
+                                <div class="nb-item">
+                                    <div class="img-box">
+                                        <img src="./image/gis/bytx.png"/>
+                                    </div>
+                                    <div class="text-box">
+                                        <span>姓名&nbsp;&nbsp;张三</span>
+                                        <span>住址&nbsp;&nbsp;乌兰地区</span>
+                                        <span>电话&nbsp;&nbsp;0477-7856421</span>
+                                    </div>
+                                </div>
+                                <div class="nb-item text-item">
+                                    <div class="ni-box">
+                                        <div class="label">
+                                            <div class="l_icon"></div>学校名称</div>
+                                        <div class="value">鄂托克前旗实验小学</div>
+                                    </div>
+                                    <div class="ni-box">
+                                        <div class="label"><div class="l_icon"></div>学校住址</div>
+                                        <div class="value">鄂尔多斯市鄂托克前旗敖勒召其镇苏力 迪东街</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 操作区 -->
+            <div class="opt-areabox">
+                <div class="opt-areabox-wapper">
+                    <div class="add-reduce">
+                        <i class="ar-icon el-icon-plus"></i>
+                        <i class="ar-icon el-icon-minus"></i>
+                    </div>
+                    <div class="position">
+
+                    </div>
+                    <div class="tab-box">
+                        <span :class="{'active-span': type === 1}" @click="typeClick(1)">地图</span>
+                        <span :class="{'active-span': type === 2}" @click="typeClick(2)">影像</span>
+                        <span :class="{'active-span': type === 3}" @click="typeClick(3)">三维</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/anijs-min.js"></script>
+    <script src="./js/module/gis.js"></script>
+</body>
+</html>

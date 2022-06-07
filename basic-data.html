@@ -1,0 +1,50 @@
+<!-- 基础数据 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基础数据</title>
+    <link rel="stylesheet" href="./css/reset.css"></link>
+    <link rel="stylesheet" href="./css/element.css"></link>
+    <link rel="stylesheet" href="./css/anicollection-min.css"></link>
+    <link rel="stylesheet" href="./css/basic-data.css"></link>
+    <link rel="stylesheet" href="./css/anicollection-min.css"></link>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/element.js"></script>
+</head>
+<body>
+    <div class="base-c  basic-data" id="basic-data-root">
+        <div class="basic-data__tbg"></div>
+        <div class="basic-data__header">
+            <div class="title">鄂托克前旗社会治安综合治理信息平台</div>
+            <div class="fy-title"></div>
+        </div>
+        <div class="basic-data__content">
+            <div class="title_name">
+                <span>基础数据</span>
+            </div>
+            <div class="content">
+                <div class="c-line">
+                    <template v-for="(item,index) in lineDataList">
+                        <div class="cl-item" @mousemove="mousemove" @mouseleave="mouseleave" @click="clClick">
+                            <div class="cl-item__icon">
+                                <div :class="['cic-after', currentAniClass]">
+                                    <img :src="item.bg"/>
+                                </div>
+                            </div>
+                            <div class="cl-item__label">{{item.label}}</div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/anijs-min.js"></script>
+    <script src="./js/module/basic-data.js"></script>
+    <script>
+        AniJS.run();
+    </script>
+</body>
+</html>
